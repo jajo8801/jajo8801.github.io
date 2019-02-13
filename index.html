@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Jacob Johnson</title>
+    <link rel="stylesheet" href="phone.css">
+    <script src="phone.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() { // do this when the document is loaded
+            openTab(event, 'content_dialer')
+
+        });
+    </script>
+  </head>
+  <body>
+    <div id="tab_bar">
+    	<button class="tab_links" onclick="openTab(event, 'content_dialer')" id="dialer">Dialer</button>
+    	<button class="tab_links" onclick="openTab(event, 'content_contacts')" id="contacts">Contact List</button>
+    	<button class="tab_links" onclick="openTab(event, 'content_add_contacts')" id="add_contacts">Add Contacts</button>
+    </div>
+
+    <div id="content_dialer" class="tabs_names">
+    	<div class ="titles" id="content_dialer_title">Dialer</div>
+    	<input type="text" id="content_dialer_input">
+    	<div id="content_dialer_keypad">
+    		<button class="dialer_keys" onclick="dialNumber(event, 1, 'content_dialer_input')" id="content_dialer_keypad_1">1</button>
+    		<button class="dialer_keys" onclick="dialNumber(event, 2, 'content_dialer_input')" id="content_dialer_keypad_2">2</button>
+    		<button class="dialer_keys" onclick="dialNumber(event, 3, 'content_dialer_input')" id="content_dialer_keypad_3">3</button>
+    		<button class="dialer_keys" onclick="dialNumber(event, 4, 'content_dialer_input')" id="content_dialer_keypad_4">4</button>
+    		<button class="dialer_keys" onclick="dialNumber(event, 5, 'content_dialer_input')" id="content_dialer_keypad_5">5</button>
+    		<button class="dialer_keys" onclick="dialNumber(event, 6, 'content_dialer_input')" id="content_dialer_keypad_6">6</button>
+    		<button class="dialer_keys" onclick="dialNumber(event, 7, 'content_dialer_input')" id="content_dialer_keypad_7">7</button>
+    		<button class="dialer_keys" onclick="dialNumber(event, 8, 'content_dialer_input')" id="content_dialer_keypad_8">8</button>
+    		<button class="dialer_keys" onclick="dialNumber(event, 9, 'content_dialer_input')" id="content_dialer_keypad_9">9</button>
+    		<button class="dialer_keys" onclick="dialNumber(event, '*', 'content_dialer_input')" id="content_dialer_keypad_*">*</button>
+    		<button class="dialer_keys" onclick="dialNumber(event, 0, 'content_dialer_input')" id="">0</button>
+    		<button class="dialer_keys" onclick="dialNumber(event, '#', 'content_dialer_input')" id="content_dialer_keypad_#">#</button>
+    		<button class="dialer_keys" onclick="dialNumber(event, 'dial', 'content_dialer_input')" id="content_dialer_keypad_dial">Dial</button>
+        <button class="dialer_keys" onclick="dialNumber(event, 'clear', 'content_dialer_input')" id="content_dialer_keypad_clear">Clear</button>
+      </div>
+    </div>
+
+
+    <div id="content_contacts" class="tabs_names">
+    	<div class ="titles" id="content_contacts_title">Contacts</div>
+      <button class="dialer_keys">Kristi Sophia</button>
+      <button class="dialer_keys">Ankita Nadiya</button>
+      <button class="dialer_keys">Nuka Turlough</button>
+      <button class="dialer_keys">Fatima Priska</button>
+      <button class="dialer_keys">Tafik Andrija</button>
+    </div>
+
+
+    <div id="content_add_contacts" class="tabs_names">
+    	<div class ="titles" id="content_add_contacts_title">Add Contact</div>
+    	<div class="div_add_contact">
+    		<form id="form_add_contact">
+    			<div class="form_text">Name</div>
+          <input type="text" id="form_add_contact_name">
+    			<div class="form_text">Phone Number</div>
+          <input type="text" id="form_add_contact_phone">
+    			<div class="form_text">Email Address</div>
+          <input type="text" id="form_add_contact_email">
+          <div id="form_add_clear_group">
+            <button id="form_add_contact_submit">Add Contact</button>
+            <button id="form_add_contact_submit">Clear</button>
+          </div
+    		</form>
+    	</div>
+    </div>
+  </body>
+</html>
